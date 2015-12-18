@@ -1,0 +1,54 @@
+<ion-view class="addmodal" >
+   <ion-header-bar  class="item-input-inset modelheader bar-balanced" align-title="center" >
+      <i class="button icon-left ion-android-arrow-back button-clear" ng-click="editmodal.hide()"></i>
+      <h1 class="title">Edit data</h1>
+   </ion-header-bar>
+   <ion-content>
+      <form name="myForm" novalidate>
+         <label class="item item-input">
+				 <span class="input-label">Name</span>
+					<input style="width:100%" type="text" name="name"  ng-model="data.name" required>
+				<div style="right:10px;float: right;">
+					<span style="color:red" ng-show="myForm.name.$dirty && myForm.name.$invalid">
+					 <span   ng-show="myForm.name.$error.required">Username is required.</span>
+					 </span>
+				</div>	
+         </label>
+		
+         <label class="item item-input">
+            <span class="input-label">Email</span>
+            <input style="width:100%" type="email" name="email"  ng-model="data.email">
+             <div >
+               <span style="color:red;right:10px;" ng-show="myForm.email.$dirty && myForm.email.$invalid">
+               <span ng-show="myForm.email.$error.required">Email is required.</span>
+               <span ng-show="myForm.email.$error.email">Invalid email address.</span>
+               </span>
+            </div >
+         </label>
+		
+         <label class="item item-input">
+            <span class="input-label">Mobile</span>
+            <input type="number" name="number" ng-model="data.mbnum" ng-maxlength="10">
+            <div >
+               <span style="color:red" ng-show="myForm.number.$error.maxlength">
+               enter valid mobile number</span>
+            </div >
+         </label>
+         <label class="item item-input">
+            <span class="input-label">Date of birth</span>
+            <input type="text" name="date" ng-model="data.dob" placeholder="yyyy-MM-dd" required>
+            <div >
+				<span style="color:red;right:10px;" ng-show="myForm.date.$dirty && myForm.date.$invalid">
+				   <span  ng-show="myForm.date.$error.required">
+				   Required!</span>				   
+			   </span>
+            </div >
+         </label>
+         <label class="item item-input">
+         <input type="submit" class="submitButton" ng-click="update();"
+            ng-disabled="myForm.name.$dirty && myForm.name.$invalid ||  
+            myForm.email.$dirty && myForm.email.$invalid || myForm.number.$invalid  ||  myForm.date.$invalid" >
+         </label>
+      </form>
+   </ion-content>
+</ion-view>

@@ -1,0 +1,74 @@
+/*
+To customize the look and feel of Ionic, you can override the variables
+in ionic's _variables.scss file.
+
+For example, you might change some of the default colors:
+
+$light:                           #fff !default;
+$stable:                          #f8f8f8 !default;
+$positive:                        #387ef5 !default;
+$calm:                            #11c1f3 !default;
+$balanced:                        #33cd5f !default;
+$energized:                       #ffc900 !default;
+$assertive:                       #ef473a !default;
+$royal:                           #886aea !default;
+$dark:                            #444 !default;
+*/
+
+// The path for our ionicons font files, relative to the built CSS in www/css
+$ionicons-font-path: "../lib/ionic/fonts" !default;
+
+// Include all of Ionic
+@import "www/lib/ionic/scss/ionic";
+
+.setPadding{
+	padding:10px;
+}
+.searchdiv{
+	padding-left: 10px;
+    width: 85%;
+    clear: right;
+    float: left;
+}
+.button.button-balanced {
+    border-color: transparent;
+    background-color: #33cd5f;
+    color: #fff;
+    float: right;
+    position: relative;
+    margin-top: -48px;
+}
+.add-records{
+	 border-color: transparent;
+    background-color: #33cd5f;
+    color: #fff;   
+	right: 10px;
+    float: right;
+}
+
+h4{
+	float:left;
+}
+
+.tablediv{
+	position: relative;
+    margin-top: 40px;
+}
+table, th , td  {
+  border: 1px solid grey;
+  border-collapse: collapse;
+  padding: 5px;
+}
+table tr:nth-child(odd)	{
+  background-color: #f1f1f1;
+}
+table tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+input.submitButton{
+	height: 34px;
+    background-color: #33CD5F;
+    color: #fff;
+    margin-right: 7px;
+}
